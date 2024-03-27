@@ -1,0 +1,58 @@
+Answers for Lab 3
+-----------------------------------------------
+
+
+
+EXERCISE 1
+
+1. Should instance variable interestRate be declared as static? Explain.
+	It should not be declared static as each object requires its own interest rate. If it was static, the objects 
+	would not be able to access the variable. They would all share the same one.
+2. Write the output from the test harness for class SavingsAccount. 
+	SavingsAccount: balance $115.0, interest rate 0.15
+
+EXERCISE 2
+
+3. Which method(s) of the class CheckingAccount demonstrate overriding? Which methods demonstrate overloading?
+	Overriding: deposit, toString, withdraw.
+	Overloading: None
+
+4. Is bacc0 = chacc1 legal? Why?
+	Yes. An object of the superclass can reference an object of its subclass. bacc0 is of the superclass and chacc1 is of the subclass
+
+5. Is chacc1 = bacc1 legal? Why?
+	No. An object of the subclass cannot reference an object of the superclass. chacc1 is of the subclass and bacc1 is of the superclass		
+
+6. On which variables bacc1, chacc1, sacc1 was the invocation to method
+deductFees() valid? Explain.
+	The invocation was valid on chacc1 because the method only exists in the subclass CheckingAccount.
+
+7. Which compilation error(s) could be fixed through casting? Which one(s)
+could not be fixed? Why?
+	bacc0 and bacc2 could be fixed through casting because bacc0 is reference an object of the subclass 
+	CheckingAccount and bacc2 is an object of the subclass CheckingAccount as well.
+	bacc1 and sacc1 could not be fixed because they were not object of the subclass containing the deductFees method.
+
+8. Does the program run after deleting the line causing the compilation 
+error? If the program crashed, why did it crash?
+	The program crashed because an object of the superclass was trying to invoke a method of the subclass.
+
+9. What was the runtime error obtained when changing super.deposit(amount)
+to deposit(amount) in class CheckingAccount.java? 
+	StackOverflow Error. 
+
+10. How many times is method deposit invoked?
+	0 times.
+
+
+EXERCISE 3
+
+11. Why does the compiler issue an error message when invoking newAcc.getTransactionCount()? Why does the compiler issue an error message when invoking newAcc.getInterestRate()?
+	The method getTransactionCount is not of the subclass SavingsAccount so if newAcc is a savings account, the program will crash.
+ 	The method getInterestRate is not of the subclass CheckingAccount so if newAcc is a checking account, the program will crash.
+	Both methods are not defined for the type BankAccount.
+
+12. Can you tell whether in the statement String accountInfo = newAcc.toString(); the
+method toString() being invoked is from the class CheckingAccount or from the class
+SavingsAccount? Explain your answer.
+	No you cannot because both subclasses override the tostring method in the BankAccount class. It can be from either class, depending on the user's input.

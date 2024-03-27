@@ -1,0 +1,22 @@
+Answers Lab 10
+
+Exercise 1
+1. What are the base cases of the recursive Fibonacci method?
+	n == 1 or n == 2
+2. Running times
+          ifib        rfib 
+n = 20    1ms         0ms
+n = 30    0ms         5ms
+n = 40    0ms  	      625ms
+n = 45    0ms         7547ms
+n = 50    0ms         53190ms
+
+3. How many calls are made to rfib(2)?
+	63245986
+
+4. Why is the recursive algorithm for computing Fibonacci numbers so slow compared to the iterative algorithm? 
+	You call the same method too many times
+
+Exercise 2
+5. Why is it difficult to design an iterative version of the algorithm for computing the Abo numbers?
+	There are too many values of Abo that you need to keep track of which is difficult using an iterative method.

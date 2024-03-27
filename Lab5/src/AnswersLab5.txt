@@ -1,0 +1,107 @@
+Answers for Lab 5
+-----------------------------------------------
+
+EXERCISE 1
+----------
+
+i) What do you think would be printed after the first invocation to method1 (Line 38)?
+	A
+	B
+	D
+	F
+
+ii) What do you think would be printed after the second invocation to method1 (Line 43)?
+	A
+	B
+	D
+	F
+
+iii) What do you think would be printed after the third invocation to method1 (Line 48)?
+	A
+	B
+	C
+	F
+	G
+
+
+Was answer (i) incorrect? No
+Was answer (ii) incorrect? No
+Was answer (iii) incorrect? Yes
+
+After commenting out line 10 and uncommenting line 11:
+i) What do you think would be printed after the first invocation to method1 (Line 38)?
+	A
+	B
+	X
+	E
+	G
+
+ii) What do you think would be printed after the second invocation to method1 (Line 43)?
+	A
+	B
+	X
+	E
+	G
+
+iii) What do you think would be printed after the third invocation to method1 (Line 48)?
+	A
+	B
+	C
+	F
+	G
+
+Was answer (i) incorrect? No
+Was answer (ii) incorrect? No 
+Was answer (iii) incorrect? Yes
+
+EXERCISE 2
+----------
+
+What line of the program causes the exception to be thrown?
+	The cause of the error is in line 7.
+Why did testArray[0][0] not change?
+	The variable j is initialized to 1 not 0.
+After pressing F6 until testArray[0][5] changes value from 0 to 5 and the statement for (int j=1; j<=6; j++) is highlighted in green,
+    - what are the values of i and j?
+	0 and 6
+	- is it correct that the program tries to store the value (i+1)*j in testArray[i][j]?
+		No, there is no index 6 in the array.
+EXERCISE 3
+----------
+
+Which line of the program causes the exception to be thrown?
+	Line 10
+Which line is highlighted after pressing F6?
+	Line 10
+After re-running the program which line is highligter after pressing F5?
+	Line 18
+What is the differentce between F5 and F6?
+	F5 steps into the line of code, looking at the method. F6 steps over it to the next line.
+What are the values of variables i, step, result and Load?
+	i = 4
+	step = -468
+	result = 472
+	load = 0
+Why does the progam crash after pressing F6?
+	There is a ZeroDivisionError
+
+EXERCISE 4
+----------
+
+Why is there a compilation error in line 27?
+	The variable i in the for loop is a block variable and not a local variable. Not in the same scope. 
+	
+What do you think will be the values of variables var1 and obj1 immediately after method2(obj1) is executed?
+	var1 = -20
+	obj1 = joe
+
+What do you think will be the values of variables var1 and obj1 immediately after method1(obj1) is executed?
+	var1 = 10
+	obj1 = joe
+
+What are the correct values of variables var1 and obj1 immediately after method2(obj1) is executed?
+	var1 = -20
+	obj1 = joe
+
+Why is the result of the comparison (obj1 == obj2) false even though both obj1 and obj2 contain the same information, namely "joe"? 
+	obj1 and obj2 are stored in different locations.

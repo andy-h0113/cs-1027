@@ -1,0 +1,44 @@
+Answers for Lab 9
+-----------------------------------------------
+
+EXERCISE 1
+
+1. What are the values of x, arr[0], and arr[1] in lines 20, 24, and 27 of MemoryDemo.java?
+	x = 2
+	arr[0] = 5
+	arr[1] = 6
+
+2. If the value of x set in line 18 did not change in method m1 explain why.
+	The scope of x is within the main method. Since x is a primitive variable, the value of x was sent as a parameter.
+
+3. Explain which of arr[0] or arr[1] were changed in methods m2() or m3() and why these values were changed.
+	arr[0] was changing because arr was sent as an argument to m2. Since arr is a reference variable, the address of the array was sent not its values.
+	Therefore the changes made to arr in the method actually changed the values in arr[0]. arr[1] didn't change because the value of arr[1] was sent.
+
+EXERCISE 3
+
+4. How many activation records are there in the execution stack?
+	5 activation records
+
+
+5. Write the values of 
+param1 = 1
+local1 = 1
+i = 1
+
+6. How did the execution stack change after you pressed F6 twice?
+	Went from m1, m2, m3, m3 to:
+	m2, m3, m3
+	m1 record was removed.
+
+EXERCISE 4
+
+7. Which exception is thrown?
+	StackOverflowError
+	
+8. Why is this exception thrown?
+	The method never stops executing (infiinite recursions), therefore creating too many activity records
+
+
+
+
